@@ -16,6 +16,22 @@ const datum_blurb = 'A personal metrics management platform. Write more copy her
 const bag_n_fits_blurb = 'A python-based command-line program which takes files/directories and produces 1) a csv file containing all metadata, and 2) a checksumed backup'
 const car_wash_blurb = 'A family member is trying to sell a business. I made this page for him to help sell it. Features social media embeds, 3rd-party React components, etc.'
 
+// other links
+const other_links = [
+	{
+		text: 'my profile on github',
+		url: 'http://github.com/tdkohlbeck',
+	},
+	{
+		text: 'my resume (css, not pdf or LaTeX!)',
+		url: 'http://travisk.info/resume',
+	},
+	{
+		text: 'something else',
+		url: 'http://travisk.info',
+	},
+]
+
 function App() {
   return (
     <article>
@@ -38,7 +54,7 @@ function App() {
         </ul>
       </section>
       <section id='medium'>
-			<header>Projects of Note</header>
+				<header>Projects of Note</header>
 				<ul>
 					<li>
 						<span className='project-title'>Datum</span>
@@ -55,9 +71,20 @@ function App() {
 				</ul>
       </section>
       <section id='small'>
+				<header>See Also</header>
+				{other_links.map(pair => (
+					<>
+						<a href={pair.url} key={pair.text}>{pair.text}</a>
+						<span key={pair.url}>{'◦'}</span>
+					</>
+				))}
       </section>
+			<hr />
       <footer>
-
+				<header>Annotations</header>
+				<ol>
+					<li>HTML, CSS, JavaScript (ES2018), Browser DOM API</li>
+				</ol>
       </footer>
     </article>
   );
