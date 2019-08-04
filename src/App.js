@@ -10,9 +10,11 @@ const engineering_blurb = 'I work with code, but my degree\'s in engineering, so
 //const engineering_blurb2 = 'These days I build with code, but I was taught engineering, so I know how to solve problems and coordinate with teams.'
 const experience_blurb = 'I have experience working on enterprise codebases, fixing consumer-facing production code, and building internal tools for coworkers.'
 const personal_blurb = 'Other hobbies include learning about space & physics, camping & hiking, and mainstream auteur films.'
+
 // project copy
 const datum_blurb = 'A personal metrics management platform. Write more copy here, mention features of gui and cli.'
 const bag_n_fits_blurb = 'A python-based command-line program which takes files/directories and produces 1) a csv file containing all metadata, and 2) a checksumed backup'
+const car_wash_blurb = 'A family member is trying to sell a business. I made this page for him to help sell it. Features social media embeds, 3rd-party React components, etc.'
 
 function App() {
   return (
@@ -45,6 +47,10 @@ function App() {
 					<li>
 						<span className='project-title'>Bag 'n Fits</span>
 						{bag_n_fits_blurb}
+					</li>
+					<li>
+						<span className='project-title'>Marketing Page</span>
+						{car_wash_blurb}
 					</li>
 				</ul>
       </section>
