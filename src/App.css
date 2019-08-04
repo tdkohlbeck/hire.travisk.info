@@ -45,13 +45,13 @@ section#big {
 #big ul {
 	/*font-size: .9em;*/
 	list-style: none;
-	padding: 1.5em 0;
+	margin: 2.5em 0;
 }
 
 #big li {
 	display: flex;
 	align-items: center;
-	padding-bottom: 1.25em;
+	margin-bottom: 1.25em;
 }
 
 img#gear {
@@ -75,7 +75,7 @@ section#medium > header {
 
 #medium ul {
 	font-size: .9em;
-	margin: 0 1.5em;
+	margin: 0 2em;
 }
 
 #medium li {
