@@ -50,13 +50,12 @@ section#big {
 
 #big li {
 	display: flex;
-	align-items: flex-start;
-	padding-bottom: 1em;
+	align-items: center;
+	padding-bottom: 1.25em;
 }
 
 img#gear {
 	padding-right: 1em;
-	padding-top: 1em;
 	width: 4em;
 	height: auto;
 }
@@ -65,6 +64,7 @@ img#gear {
 	font-weight: bolder;
 	font-family: sans-serif;
 	padding-right: .5em;
+	font-size: 1.1em;
 }
 
 section#medium > header {
