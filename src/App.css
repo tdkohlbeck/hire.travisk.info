@@ -13,6 +13,12 @@ html, body, #root {
 	height: 100%;
 }
 
+a {
+	color: unset;
+	text-decoration-style: dotted;
+	text-decoration-color: grey;
+}
+
 article {
 	display: flex;
 	position: relative;
@@ -32,6 +38,7 @@ header {
 	padding-top: 2em;
 	padding-bottom: .5em;
 	font-size: 2em;
+	text-align: center;
 }
 
 main {
@@ -75,15 +82,45 @@ section#medium > header {
 
 #medium ul {
 	font-size: .9em;
-	margin: 0 2em;
+	margin-left: 3em;
+	margin-right: 1em;
 }
 
 #medium li {
 	padding-bottom: 1em;
 }
 
+section#small > header {
+	padding-top: 0em;
+	padding-bottom: .5em;
+	font-size: 1.67em;
+}
+
+section#small {
+	margin: 1em;
+	font-size: .9em;
+}
+
+section#small > span {
+	opacity: 0.5;
+}
+
+section#small > * {
+	padding: 0 .25em;
+}
+
+footer {
+	font-size: .9em;
+}
+
 @media(min-width: 400px) {
 	article {
 		padding: 0 2em;
+	}
+}
+
+@media(min-width: 800px) {
+	article {
+		padding: 0 8em;
 	}
 }
