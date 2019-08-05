@@ -14,7 +14,7 @@ html, body, #root {
 }
 
 a {
-	color: unset;
+	color: #fafafa;
 	border-bottom: 2px dotted hsla(0, 0%, 50%, 0.5);
 	text-decoration: none;
 }
@@ -73,7 +73,7 @@ img#gear {
 .project-title {
 	font-weight: bolder;
 	font-family: sans-serif;
-	padding-right: .5em;
+	margin-right: .5em;
 	font-size: 1.1em;
 }
 
@@ -86,8 +86,19 @@ img#gear {
 	margin-bottom: 1.25em;
 }
 
-section#small > span {
+section#small > span > span {
 	opacity: 0.5;
+	padding: 0 0.5em;
+}
+
+footer {
+	font-size: .9em;
+	padding-bottom: 2em;
+	padding-left: 2em;
+}
+
+footer li {
+	padding-bottom: 0.5em;
 }
 
 @media(min-width: 400px) {
