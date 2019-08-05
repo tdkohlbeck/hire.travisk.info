@@ -6,9 +6,9 @@ import book_icon from './book.svg'
 
 // main copy
 //const main_pitch = `I am a novice web developer and designer looking for an entry-level position with opportunity to learn and grow. I work with standard web technologies [1](HTML + CSS + JS), modern tools and libraries[2] and unix-based command-lines[3]`
-const engineering_blurb = 'I work with code, but my degree\'s in engineering, so I know how to solve problems and coordinate with teams.'
+//const engineering_blurb = 'I work with code, but my degree\'s in engineering, so I know how to solve problems and coordinate with teams.'
 //const engineering_blurb2 = 'These days I build with code, but I was taught engineering, so I know how to solve problems and coordinate with teams.'
-const experience_blurb = 'I have experience working on enterprise codebases, fixing consumer-facing production code, and building internal tools for coworkers.'
+//const experience_blurb = 'I have experience working on enterprise codebases, fixing consumer-facing production code, and building internal tools for coworkers.'
 const personal_blurb = 'Other hobbies include learning about space & physics, camping & hiking, and mainstream auteur films.'
 
 // project copy
@@ -54,11 +54,11 @@ function App() {
         <ul>
           <li>
             <img src={gear_icon} id='gear' alt='mechanical gear icon' />
-            <span>{engineering_blurb}</span>
+            <span>I work with code, but my <a href='#4'>degree is engineering<sup>4</sup></a>, so I know how to solve problems and coordinate with teams.</span>
           </li>
           <li>
             <img src={office_icon} id='gear' alt='mechanical gear icon' />
-            <span>{experience_blurb}</span>
+            <span><a href='#5'>I have experience working on enterprise codebases, fixing consumer-facing production code, and building internal tools for coworkers.<sup>5</sup></a></span>
           </li>
 					<li>
             <img src={book_icon} id='gear' alt='mechanical gear icon' />
@@ -93,12 +93,13 @@ function App() {
 				))}
       </section>
       <footer>
-				<header>Annotations</header>
+				<header>Footnotes</header>
 				<ol>
 					<li id='1'>HTML, CSS, JavaScript (ES2018), Browser DOM API</li>
 					<li id='2'>React.js, so on and so forth.</li>
 					<li id='3'>GNU+Linux, Bash, Nginx, MySQL, Node.js</li>
 					<li id='4'>Specifically mechanical engineering, but I still learned plenty about code, be it Matlab, numerical methods, or programming robots.</li>
+					<li id='5'>See <a href='resume'>my resume</a> for further details.</li>
 				</ol>
       </footer>
     </article>
