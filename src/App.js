@@ -5,7 +5,7 @@ import office_icon from './office-building.svg'
 import book_icon from './book.svg'
 
 // main copy
-const main_pitch = `I am a novice web developer and designer looking for an entry-level position with opportunity to learn and grow. I work with standard web technologies [1](HTML + CSS + JS), modern tools and libraries[2] and unix-based command-lines[3]`
+//const main_pitch = `I am a novice web developer and designer looking for an entry-level position with opportunity to learn and grow. I work with standard web technologies [1](HTML + CSS + JS), modern tools and libraries[2] and unix-based command-lines[3]`
 const engineering_blurb = 'I work with code, but my degree\'s in engineering, so I know how to solve problems and coordinate with teams.'
 //const engineering_blurb2 = 'These days I build with code, but I was taught engineering, so I know how to solve problems and coordinate with teams.'
 const experience_blurb = 'I have experience working on enterprise codebases, fixing consumer-facing production code, and building internal tools for coworkers.'
@@ -19,17 +19,30 @@ const car_wash_blurb = 'A family member is trying to sell a business. I made thi
 // other links
 const other_links = [
 	{
-		text: 'my profile on github',
+		text: 'my github profile',
 		url: 'http://github.com/tdkohlbeck',
 	},
 	{
-		text: 'my resume (css, not pdf or LaTeX!)',
+		text: 'my (css) resume',
 		url: 'http://travisk.info/resume',
+	},
+	{
+		text: 'my linkedin profile',
+		url: 'http://travisk.info',
 	},
 	{
 		text: 'something else',
 		url: 'http://travisk.info',
 	},
+	{
+		text: 'another placeholder',
+		url: 'http://travisk.info',
+	},
+	{
+		text: 'my bookmarks maybe',
+		url: 'http://travisk.info',
+	},
+
 ]
 
 function App() {
@@ -57,15 +70,15 @@ function App() {
 				<header>Projects of Note</header>
 				<ul>
 					<li>
-						<span className='project-title'>Datum</span>
+						<a href='#' className='project-title'>Datum</a>
 						{datum_blurb}
 					</li>
 					<li>
-						<span className='project-title'>Bag 'n Fits</span>
+						<a href='#' className='project-title'>Bag 'n Fits</a>
 						{bag_n_fits_blurb}
 					</li>
 					<li>
-						<span className='project-title'>Marketing Page</span>
+						<a href='#' className='project-title'>Marketing Page</a>
 						{car_wash_blurb}
 					</li>
 				</ul>
@@ -73,16 +86,19 @@ function App() {
       <section id='small'>
 				<header>See Also</header>
 				{other_links.map(pair => (
-					<>
-						<a href={pair.url} key={pair.text}>{pair.text}</a>
-						<span key={pair.url}>{'◦'}</span>
-					</>
+					<span key={pair.text}>
+						<a href={pair.url}>{pair.text}</a>
+						<span>{' ◦ '}</span>
+					</span>
 				))}
       </section>
       <footer>
 				<header>Annotations</header>
 				<ol>
-					<li>HTML, CSS, JavaScript (ES2018), Browser DOM API</li>
+					<li id='1'>HTML, CSS, JavaScript (ES2018), Browser DOM API</li>
+					<li id='2'>React.js, so on and so forth.</li>
+					<li id='3'>GNU+Linux, Bash, Nginx, MySQL, Node.js</li>
+					<li id='4'>Specifically mechanical engineering, but I still learned plenty about code, be it Matlab, numerical methods, or programming robots.</li>
 				</ol>
       </footer>
     </article>
