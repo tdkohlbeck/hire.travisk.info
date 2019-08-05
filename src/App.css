@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	line-height: 1.5em;
+	line-height: 1.55em;
 }
 
 html {
@@ -15,7 +15,7 @@ html, body, #root {
 
 a {
 	color: #fafafa;
-	border-bottom: 2px dotted hsla(0, 0%, 50%, 0.5);
+	border-bottom: 1px dotted hsla(0, 0%, 50%, 0.67);
 	text-decoration: none;
 }
 
@@ -37,6 +37,7 @@ header {
 	padding-bottom: .5em;
 	font-size: 1.67em;
 	text-align: center;
+	font-family: Helvetica, sans-serif;
 }
 article > header {
 	padding-top: 2em;
@@ -53,6 +54,10 @@ section {
 }
 section#big {
 	margin: 0 2em;
+}
+section#small {
+	text-align: center;
+	padding-bottom: 3em;
 }
 
 #big ul {
@@ -88,10 +93,10 @@ img#gear {
 
 section#small > span > span {
 	opacity: 0.5;
-	padding: 0 0.5em;
+	padding: 0 0.33em;
 }
 
-footer {
+footer ol {
 	font-size: .9em;
 	padding-bottom: 2em;
 	padding-left: 2em;
