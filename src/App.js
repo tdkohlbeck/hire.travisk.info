@@ -36,7 +36,7 @@ function App() {
   return (
     <article>
       <header>Hi, I'm Travis.</header>
-      <main>{main_pitch}</main>
+      <main>I am a novice web developer and designer looking for an entry-level position with opportunity to learn and grow. I work with <a href='#1'>standard web technologies<sup>1</sup></a>, <a href='#2'>modern front-end tools & libraries<sup>2</sup></a>, and <a href='#3'>server backends<sup>3</sup></a></main>
       <section id='big'>
         <ul>
           <li>
@@ -79,7 +79,6 @@ function App() {
 					</>
 				))}
       </section>
-			<hr />
       <footer>
 				<header>Annotations</header>
 				<ol>
