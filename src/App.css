@@ -126,22 +126,26 @@ footer li {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	right: 0;
-	height: 3em;
-	padding: 0 2em;
+	height: 4em;
+	padding: 0 1em;
 	background-color: var(--bg-color);
+	box-shadow: 0 0 .5em .5em var(--bg-color);
 	font-family: Helvetica, sans-serif;
 }
 #email > a {
 	border: none;
+	font-size: 1.1em;
 }
 #at {
-	font-size: 1.25em;
-	padding: 0 .125em;
+	display: inline-block;
+	position: relative;
+	top: .1em;
+	font-size: 1.5em;
+	padding: 0 .15em;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
