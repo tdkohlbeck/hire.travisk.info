@@ -5,16 +5,24 @@
 	line-height: 1.55em;
 }
 
-html {
+:root {
 	font-size: calc(0.65em + 1vw);
+	--color: #1a1a1a;
+	--bg-color: #fafafa;
+}
+
+[data-theme='dark'] {
+	--color: #fafafa;
+	--bg-color: #1a1a1a;
 }
 
 html, body, #root {
 	height: 100%;
+	background-color: var(--bg-color);
 }
 
 a {
-	color: #fafafa;
+	color: var(--color);
 	border-bottom: 1px dotted hsla(0, 0%, 50%, 0.67);
 	text-decoration: none;
 }
@@ -28,9 +36,9 @@ article {
 	right: 0;
 	bottom: 0;
 	padding: 0 1em;
-	color: #fafafa;
-	background-color: #1a1a1a;
-	font-family: Georgia, 'Times New Roman', Times, serif
+	color: var(--color);
+	background-color: var(--bg-color);
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header {
@@ -42,6 +50,7 @@ header {
 article > header {
 	padding-top: 2em;
 	font-size: 2em;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 main {
@@ -69,10 +78,21 @@ section#small {
 	margin-bottom: 1.25em;
 }
 
-img#gear {
+svg {
+	flex-shrink: 0;
 	padding-right: 1em;
-	width: 4em;
 	height: auto;
+	width: 4.5em;
+}
+path {
+	fill: var(--color);
+}
+#wrench-icon {
+}
+#office-icon {
+	padding-top: 0.5em;
+}
+#planet-icon {
 }
 
 .project-title {
@@ -98,12 +118,51 @@ section#small > span > span {
 
 footer ol {
 	font-size: .9em;
-	padding-bottom: 2em;
+	padding-bottom: 6em;
 	padding-left: 2em;
 }
 
 footer li {
 	padding-bottom: 0.5em;
+}
+
+#email {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 3em;
+	padding: 0 2em;
+	background-color: var(--bg-color);
+	font-family: Helvetica, sans-serif;
+}
+#email > a {
+	border: none;
+}
+#at {
+	font-size: 1.25em;
+	padding: 0 .125em;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#toggle-slot {
+	background-color: var(--color);
+	width: 3.5em;
+	height: 2em;
+	border-radius: 1em;
+	display: flex;
+	align-items: center;
+}
+#toggle-btn {
+	background-color: var(--bg-color);
+	width: 1.5em;
+	height: 1.5em;
+	margin: .25em;
+	border-radius: .75em;
 }
 
 @media(min-width: 400px) {
@@ -112,8 +171,9 @@ footer li {
 	}
 }
 
-@media(min-width: 800px) {
+@media(min-width: 600px) {
 	article {
-		padding: 0 8em;
+		width: 35em;
+		margin: 0 auto;
 	}
 }
