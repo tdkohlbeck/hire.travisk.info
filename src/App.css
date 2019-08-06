@@ -152,6 +152,10 @@ footer li {
 	border-radius: 1em;
 	display: flex;
 	align-items: center;
+	cursor: pointer;
+}
+#toggle-slot > input {
+	display: none;
 }
 #toggle-btn {
 	background-color: var(--bg-color);
@@ -159,6 +163,10 @@ footer li {
 	height: 1.5em;
 	margin: .25em;
 	border-radius: .75em;
+	transition: .125s;
+}
+input:checked + #toggle-btn {
+	transform: translateX(1.5em);
 }
 
 @media(min-width: 400px) {

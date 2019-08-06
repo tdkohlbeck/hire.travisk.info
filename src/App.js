@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import { ReactComponent as WrenchIcon } from './wrench.svg'
 import { ReactComponent as OfficeIcon } from './office.svg'
@@ -50,6 +50,18 @@ const other_links = [
 ]
 
 function App() {
+	useEffect(() => {
+		const dark_mode_toggle = document.querySelector('input[type="checkbox"]')
+		function toggle_colors(e) {
+			if (e.target.checked) {
+				console.log('toggle!')
+				document.documentElement.setAttribute('data-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-theme', 'light')
+			}
+		}
+		dark_mode_toggle.addEventListener('change', toggle_colors, false)
+	})
   return (
     <article>
       <header>Hi, I'm Travis.</header>
@@ -109,9 +121,10 @@ function App() {
       </footer>
 			<div id='email'>
 				<a href='mailto:hi@travisk.info'>hi<span id='at'>@</span>travisk.info</a>
-				<div id='toggle-slot'>
-					<div id='toggle-btn'></div>
-				</div>
+				<label htmlFor='dark-mode-toggle' id='toggle-slot'>
+					<input type='checkbox' id='dark-mode-toggle' />
+					<div id='toggle-btn' />
+				</label>
 			</div>
     </article>
   );
