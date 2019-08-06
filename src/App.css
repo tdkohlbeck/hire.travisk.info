@@ -87,12 +87,8 @@ svg {
 path {
 	fill: var(--color);
 }
-#wrench-icon {
-}
 #office-icon {
-	padding-top: 0.5em;
-}
-#planet-icon {
+	padding-top: 0.5em; /* eyeballed */
 }
 
 .project-title {
