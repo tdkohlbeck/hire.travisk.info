@@ -31,11 +31,9 @@ article {
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	max-width: 30em;
 	padding: 0 1em;
+	margin: 0 auto;
 	color: var(--color);
 	background-color: var(--bg-color);
 	font-family: Georgia, 'Times New Roman', Times, serif;
@@ -112,6 +110,10 @@ section#small > span > span {
 	padding: 0 0.33em;
 }
 
+#small > span:first-of-type span {
+	display: none;
+}
+
 footer ol {
 	font-size: .9em;
 	padding-bottom: 6em;
@@ -157,6 +159,7 @@ footer li {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 #toggle-slot > input {
 	display: none;
@@ -173,15 +176,9 @@ input:checked + #toggle-btn {
 	transform: translateX(1.5em);
 }
 
-@media(min-width: 400px) {
-	article {
-		padding: 0 2em;
-	}
-}
-
-@media(min-width: 600px) {
-	article {
-		width: 35em;
-		margin: 0 auto;
+@media(min-width: 1000px) {
+	#email {
+		background-color: unset;
+		box-shadow: unset;
 	}
 }
