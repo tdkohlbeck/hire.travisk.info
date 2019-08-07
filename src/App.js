@@ -4,7 +4,7 @@ import { ReactComponent as WrenchIcon } from './wrench.svg'
 import { ReactComponent as OfficeIcon } from './office.svg'
 import { ReactComponent as PlanetIcon } from './planet.svg'
 
-const personal_blurb = 'Other hobbies include learning about space & physics, mainstream auteur films, indie electro-pop rock, and mindfulness meditation.'
+const personal_blurb = 'Other hobbies include learning about space & physics, mainstream auteur films, electro-indie rock-pop, and mindfulness meditation.'
 const bag_n_fits_blurb = 'Given a directory, will create a csv containing all metadata of its contents, with optional archiving and error checking.'
 const car_wash_blurb = 'A family member is trying to sell a business. I made this page to help advertise it. Features social media embeds (among other widgets), SEO, and mobile-first responsive design'
 
@@ -38,10 +38,15 @@ const other_links = [
 		text: 'contact info',
 		url: 'http://travisk.info/contact',
 	},
+	{
+		text: 'web bookmarks',
+		url: 'http://travisk.info/links'
+	},
 ]
 
 function App() {
 	useEffect(() => {
+		// listen to dark mode toggle
 		const dark_mode_toggle = document.querySelector('input[type="checkbox"]')
 		function toggle_colors(e) {
 			if (e.target.checked) {
@@ -51,20 +56,32 @@ function App() {
 			}
 		}
 		dark_mode_toggle.addEventListener('change', toggle_colors, false)
+
+		// listen to footnote links
+		const footnote_links = document.querySelectorAll('a.footnote')
+		footnote_links.forEach(link => {
+			link.addEventListener('click', e => {
+				let footnotes = document.querySelectorAll('li.footnote')
+				footnotes.forEach(fn => fn.style.fontWeight = 'normal')
+				const number = e.target.href.split('').pop()
+				let footnote = document.getElementById(number)
+				footnote.style.fontWeight = 'bold'
+			})
+		})
 	})
   return (
     <article>
       <header>Hi, I'm Travis.</header>
-      <main>I am a novice web developer and designer looking for an entry-level position with opportunity to learn and grow. I work with <a href='#1'>standard web technologies,<sup>1</sup></a> <a href='#2'>modern front-end tools & libraries,<sup>2</sup></a> and <a href='#3'>server backends.<sup>3</sup></a></main>
+      <main>I am a novice web developer and designer looking for an entry-level position with opportunity to learn and grow. I work with <a className='footnote' href='#1'>standard web technologies,<sup>1</sup></a> <a className='footnote' href='#2'>modern front-end tools & libraries,<sup>2</sup></a> and <a className='footnote' href='#3'>server backends.<sup>3</sup></a></main>
       <section id='big'>
         <ul>
           <li>
 						<WrenchIcon id='wrench-icon' />
-            <span>I work with code, but my <a target='_blank' rel='noopener noreferrer' href='#4'>degree is engineering,<sup>4</sup></a> so I know how to solve problems and coordinate with teams.</span>
+            <span>I work with code, but my <a className='footnote' href='#4'>degree is engineering,<sup>4</sup></a> so I know how to solve problems and coordinate with teams.</span>
           </li>
           <li>
 						<OfficeIcon id='office-icon' />
-            <span>I have <a href='#5'>experience working<sup>5</sup></a> on enterprise codebases, fixing consumer-facing production code, and building internal tools for coworkers.</span>
+            <span>I have <a className='footnote' href='#5'>experience working<sup>5</sup></a> on enterprise codebases, fixing consumer-facing production code, and building internal tools for coworkers.</span>
           </li>
 					<li>
 						<PlanetIcon id='planet-icon' />
@@ -77,7 +94,7 @@ function App() {
 				<ul>
 					<li>
 						<a target='_blank' rel='noopener noreferrer' href='http://dev.getdatum.app' className='project-title'>Datum</a>
-						<a href='#6'>A personal metrics tracking app.<sup>6</sup></a> Features quick key-value-pair entry, text auto-completion, csv import/export, and offline storage.
+						<a className='footnote' href='#6'>A personal metrics tracking app.<sup>6</sup></a> Features quick key-value-pair entry, text auto-completion, csv import/export, and offline storage.
 					</li>
 					<li>
 						<a target='_blank' rel='noopener noreferrer' href='https://github.com/tdkohlbeck/bag-it-fits-it' className='project-title'>Bag 'n Fits</a>
@@ -101,12 +118,12 @@ function App() {
       <footer>
 				<header>Footnotes</header>
 				<ol>
-					<li id='1'>HTML(5), CSS, JavaScript (ES2018), Browser DOM API</li>
-					<li id='2'>React.js, Flexbox, DevTools, Progressive Web App design</li>
-					<li id='3'>GNU+Linux, Bash, Nginx, MySQL, Node.js</li>
-					<li id='4'>Specifically mechanical engineering, but I still learned plenty about code, be it Matlab, numerical methods, or programming robots.</li>
-					<li id='5'>See <a target='_blank' rel='noopener noreferrer' href='resume'>my resume</a> for further details.</li>
-					<li id='6'>Built with React.js. A <a href='http://github.com/tdkohlbeck/datum-cli'>CLI version</a> built with Python & MySQL features a time-tracking mode and a SMS/chatbot interface.</li>
+					<li className='footnote' id='1'>HTML(5), CSS, JavaScript (ES2018), Browser DOM API</li>
+					<li className='footnote' id='2'>React.js, Flexbox, DevTools, Progressive Web App design</li>
+					<li className='footnote' id='3'>GNU+Linux, Bash, Nginx, MySQL, Node.js, Python scripting</li>
+					<li className='footnote' id='4'>Specifically mechanical engineering, but I still learned plenty about code, be it Matlab, numerical methods, or programming robots.</li>
+					<li className='footnote' id='5'>See <a target='_blank' rel='noopener noreferrer' href='resume'>my resume</a> for further details.</li>
+					<li className='footnote' id='6'>Built with React.js. A <a href='http://github.com/tdkohlbeck/datum-cli'>CLI version</a> built with Python & MySQL features a time-tracking mode and a SMS/chatbot interface.</li>
 				</ol>
       </footer>
 			<div id='email'>

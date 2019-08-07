@@ -7,13 +7,13 @@
 
 :root {
 	font-size: calc(0.65em + 1vw);
-	--color: #1a1a1a;
-	--bg-color: #fafafa;
+	--bg-color: #1a1a1a;
+	--color: #fafafa;
 }
 
 [data-theme='dark'] {
-	--color: #fafafa;
-	--bg-color: #1a1a1a;
+	--bg-color: #fafafa;
+	--color: #1a1a1a;
 }
 
 html, body, #root {
@@ -130,8 +130,8 @@ footer li {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	height: 4em;
-	padding: 0 1em;
+	height: 5em;
+	padding: 0 1.5em;
 	background-color: var(--bg-color);
 	box-shadow: 0 0 .5em .5em var(--bg-color);
 	font-family: Helvetica, sans-serif;
