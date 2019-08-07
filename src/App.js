@@ -16,7 +16,7 @@ const other_links = [
 	},
 	{
 		text: 'css resume',
-		url: 'http://travisk.info/resume',
+		url: 'http://travisk.info/resume?noheader',
 	},
 	{
 		text: 'datum code',
@@ -32,15 +32,15 @@ const other_links = [
 	},
 	{
 		text: 'all projects',
-		url: 'http://travisk.info/projects',
+		url: 'http://travisk.info/projects?noheader',
 	},
 	{
 		text: 'contact info',
-		url: 'http://travisk.info/contact',
+		url: 'http://travisk.info/contact?noheader',
 	},
 	{
 		text: 'web bookmarks',
-		url: 'http://travisk.info/links'
+		url: 'http://travisk.info/links?noheader'
 	},
 ]
 
@@ -110,8 +110,8 @@ function App() {
 				<header>See Also</header>
 				{other_links.map(pair => (
 					<span key={pair.text}>
-						<a target='_blank' rel='noopener noreferrer' href={pair.url}>{pair.text}</a>
 						<span>{' ◦ '}</span>
+						<a target='_blank' rel='noopener noreferrer' href={pair.url}>{pair.text}</a>
 					</span>
 				))}
       </section>
@@ -119,15 +119,15 @@ function App() {
 				<header>Footnotes</header>
 				<ol>
 					<li className='footnote' id='1'>HTML(5), CSS, JavaScript (ES2018), Browser DOM API</li>
-					<li className='footnote' id='2'>React.js, Flexbox, DevTools, Progressive Web App design</li>
+					<li className='footnote' id='2'>React.js, TypeScript, DevTools, Grid/Flexbox</li>
 					<li className='footnote' id='3'>GNU+Linux, Bash, Nginx, MySQL, Node.js, Python scripting</li>
 					<li className='footnote' id='4'>Specifically mechanical engineering, but I still learned plenty about code, be it Matlab, numerical methods, or programming robots.</li>
-					<li className='footnote' id='5'>See <a target='_blank' rel='noopener noreferrer' href='resume'>my resume</a> for further details.</li>
+					<li className='footnote' id='5'>See <a target='_blank' rel='noopener noreferrer' href='http://travisk.info/resume?noheader'>my resume</a> for further details.</li>
 					<li className='footnote' id='6'>Built with React.js. A <a href='http://github.com/tdkohlbeck/datum-cli'>CLI version</a> built with Python & MySQL features a time-tracking mode and a SMS/chatbot interface.</li>
 				</ol>
       </footer>
 			<div id='email'>
-				<a href='mailto:hi@travisk.info'>hi<span id='at'>@</span>travisk.info</a>
+				<a href='mailto:me@travisk.info'>me<span id='at'>@</span>travisk.info</a>
 				<label htmlFor='dark-mode-toggle' id='toggle-slot'>
 					<input type='checkbox' id='dark-mode-toggle' />
 					<div id='toggle-btn' />
