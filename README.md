@@ -19,3 +19,16 @@
 		* fun rainbow thing at the end?
 		* basic black and white
 		* switch and auto switch
+
+## TODO:
+- double-check responsiveness
+- color mode localStorage
+- color mode based on time of day
+- opening blurb for meditate.guide
+- standalone resume page
+- set up email
+- remove last dot in see also
+- ~~bold footnote on click?~~
+- blue toggle highlight on tap
+- change icon
+- build and clean up
