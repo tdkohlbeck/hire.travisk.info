@@ -26,7 +26,7 @@
 - color mode based on time of day
 - opening blurb for meditate.guide
 - ~~standalone resume page~~
-- set up email (postponed)
+- ~~set up email~~ (postponed)
 - ~~remove last dot in see also~~
 - ~~bold footnote on click?~~
 - ~~blue toggle highlight on tap~~
