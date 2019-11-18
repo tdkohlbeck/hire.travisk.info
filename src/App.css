@@ -16,7 +16,9 @@
 	--color: #1a1a1a;
 }
 
-html, body, #root {
+html,
+body,
+#root {
 	height: 100%;
 	background-color: var(--bg-color);
 }
@@ -40,7 +42,7 @@ article {
 }
 
 header {
-	padding-bottom: .5em;
+	padding-bottom: 0.5em;
 	font-size: 1.67em;
 	text-align: center;
 	font-family: Helvetica, sans-serif;
@@ -92,10 +94,9 @@ path {
 .project-title {
 	font-weight: bolder;
 	font-family: sans-serif;
-	margin-right: .5em;
+	margin-right: 0.5em;
 	font-size: 1.1em;
 }
-
 
 #medium ul {
 	margin-left: 3em;
@@ -115,7 +116,7 @@ section#small > span > span {
 }
 
 footer ol {
-	font-size: .9em;
+	font-size: 0.9em;
 	padding-bottom: 6em;
 	padding-left: 2em;
 }
@@ -135,20 +136,21 @@ footer li {
 	height: 5em;
 	padding: 0 1.5em;
 	background-color: var(--bg-color);
-	box-shadow: 0 0 .5em .5em var(--bg-color);
+	box-shadow: 0 0 1em 1em var(--bg-color);
 	font-family: Helvetica, sans-serif;
 }
 #email > a {
 	border: none;
 	font-size: 1.1em;
+	font-family: monospace;
 }
 #at {
 	display: inline-block;
 	position: relative;
-	top: .1em;
+	top: 0.2em;
 	font-size: 1.5em;
-	padding: 0 .15em;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	padding: 0 0.05em;
+	font-family: Helvetica, sans-serif;
 }
 
 #toggle-slot {
@@ -168,15 +170,15 @@ footer li {
 	background-color: var(--bg-color);
 	width: 1.5em;
 	height: 1.5em;
-	margin: .25em;
-	border-radius: .75em;
-	transition: .125s;
+	margin: 0.25em;
+	border-radius: 0.75em;
+	transition: 0.125s;
 }
 input:checked + #toggle-btn {
 	transform: translateX(1.5em);
 }
 
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
 	#email {
 		background-color: unset;
 		box-shadow: unset;
