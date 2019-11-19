@@ -242,7 +242,7 @@ function App() {
 					</li>
 					<li className='footnote' id='6'>
 						Built with React.js. A{' '}
-						<a href='http://github.com/traivks-codes/datum-cli'>
+						<a href='http://github.com/travisk-codes/datum-cli'>
 							CLI version
 						</a>{' '}
 						built with Python & MySQL features a
