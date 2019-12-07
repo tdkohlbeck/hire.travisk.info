@@ -150,7 +150,7 @@ function App() {
 						<a
 							target='_blank'
 							rel='noopener noreferrer'
-							href='http://dev.getdatum.app'
+							href='http://getdatum.app'
 							className='project-title'
 						>
 							Datum
