@@ -186,6 +186,17 @@ function App() {
 						<a
 							target='_blank'
 							rel='noopener noreferrer'
+							href='https://hyperspace.marquiskurt.net/'
+							className='project-title'
+						>
+							Hyperspace
+						</a>
+						Trial development team member for a front-end client of <a href='https://joinmastodon.org/'>Mastodon</a>: an open, federated social network.
+					</li>
+					<li>
+						<a
+							target='_blank'
+							rel='noopener noreferrer'
 							href='https://github.com/travisk-codes/bag-it-fits-it'
 							className='project-title'
 						>
