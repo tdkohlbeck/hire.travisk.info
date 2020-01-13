@@ -5,19 +5,23 @@ import { ReactComponent as OfficeIcon } from './office.svg'
 import { ReactComponent as PlanetIcon } from './planet.svg'
 
 const personal_blurb =
-	'Other hobbies include learning about space & physics, popular auteur/inde films, writing, and mindfulness meditation.'
+	'Other hobbies include learning about space & physics, popular auteur/indie films, writing, and mindfulness meditation.'
 const bag_n_fits_blurb =
-	'Given a directory, will create a csv containing all metadata of its contents, with optional archiving and error checking.'
+	'Given a directory, will create a csv containing all metadata of its contents, with optional archiving and error checking. Built with Python and Java.'
 
 // other links
 const other_links = [
 	{
 		text: 'github profile',
-		url: 'http://github.com/travisk-codes',
+		url: 'https://github.com/travisk-codes',
+	},
+	{
+		text: 'linkedin profile',
+		url: 'https://www.linkedin.com/in/travisk-works/'
 	},
 	{
 		text: 'css resume',
-		url: 'http://travisk.info/resume?noheader',
+		url: 'https://travisk.info/resume?noheader',
 	},
 	{
 		text: 'datum code',
@@ -34,20 +38,20 @@ const other_links = [
 			'https://github.com/travisk-codes/react-random-notes',
 	},
 	{
-		text: 'all projects',
-		url: 'http://travisk.info/projects?noheader',
-	},
-	{
-		text: 'contact info',
-		url: 'http://travisk.info/contact?noheader',
-	},
-	{
 		text: 'web bookmarks',
-		url: 'http://travisk.info/links?noheader',
+		url: 'https://travisk.info/links?noheader',
 	},
 	{
 		text: 'simple english checker',
 		url: 'https://simple-english-checker.netlify.com',
+	},
+	{
+		text: 'all projects',
+		url: 'https://travisk.info/projects?noheader',
+	},
+	{
+		text: 'contact info',
+		url: 'https://travisk.info/contact?noheader',
 	},
 ]
 
@@ -91,6 +95,7 @@ function App() {
 				const number = e.target.href.split('').pop()
 				let footnote = document.getElementById(number)
 				footnote.style.fontWeight = 'bold'
+				footnote.style.fontSize = '1.25em'
 			})
 		})
 	})
@@ -99,7 +104,7 @@ function App() {
 			<header>Hi, I'm Travis.</header>
 			<main>
 				I am a junior web developer and designer looking for
-				an entry-level position with opportunity to learn
+				an entry-level front-end or full-stack position with opportunity to learn
 				and grow. I work with{' '}
 				<a className='footnote' href='#1'>
 					standard web technologies,<sup>1</sup>
@@ -121,8 +126,7 @@ function App() {
 							<a className='footnote' href='#4'>
 								degree is in engineering,<sup>4</sup>
 							</a>{' '}
-							so I know how to solve problems and coordinate
-							with teams.
+							so I know how to coordinate with teams to solve technical problems.
 						</span>
 					</li>
 					<li>
@@ -132,8 +136,7 @@ function App() {
 							<a className='footnote' href='#5'>
 								experience working<sup>5</sup>
 							</a>{' '}
-							on enterprise codebases, fixing
-							consumer-facing production code, and building
+							with enterprise codebases, open-source projects, and building
 							internal tools for coworkers.
 						</span>
 					</li>
@@ -158,9 +161,18 @@ function App() {
 						<a className='footnote' href='#6'>
 							A personal metrics tracking app.<sup>6</sup>
 						</a>{' '}
-						Features quick key-value-pair entry, text
-						auto-completion, csv import/export, realtime
-						sync and offline storage.
+						Features quick key-value-pair entry, text auto-completion, csv import/export, "Todo Mode", and offline storage.
+					</li>
+					<li>
+						<a
+							target='_blank'
+							rel='noopener noreferrer'
+							href='http://travisk.info/smartmarks'
+							className='project-title'
+						>
+							Smartmarks
+						</a>
+						A Bookmarks app. The front-end connects to a REST API built with Node.js, which connects to a MySQL database. All data is password-encrypted on the client.
 					</li>
 					<li>
 						<a
@@ -191,7 +203,7 @@ function App() {
 						>
 							Hyperspace
 						</a>
-						Trial development team member for a front-end client of <a href='https://joinmastodon.org/'>Mastodon</a>: an open, federated social network.
+						Trial development team member for a front-end client of <a href='https://joinmastodon.org/'>Mastodon</a>: an open, federated social network. Built with React.js, TypeScript and Material-UI.
 					</li>
 					<li>
 						<a
@@ -229,7 +241,7 @@ function App() {
 						API
 					</li>
 					<li className='footnote' id='2'>
-						React.js, TypeScript, DevTools, Grid/Flexbox
+						React.js, TypeScript, Chrome/Firefox DevTools, Material-UI
 					</li>
 					<li className='footnote' id='3'>
 						GNU+Linux, Bash, Nginx, MySQL, Node.js, Python
@@ -268,6 +280,7 @@ function App() {
 						<a href='https://github.com/travisk-codes/local-video-capture'>
 							local-video-capture
 						</a>
+						{' '}using Node.js, the Twitter developer API and "Puppeteer", a headless Chrome library.
 					</li>
 				</ol>
 			</footer>
