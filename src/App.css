@@ -7,13 +7,13 @@
 
 :root {
 	font-size: calc(0.65em + 1vw);
-	--bg-color: #1a1a1a;
-	--color: #fafafa;
+	--bg-color: #fafafa;
+	--color: #1a1a1a;
 }
 
 [data-theme='dark'] {
-	--bg-color: #fafafa;
-	--color: #1a1a1a;
+	--bg-color: #1a1a1a;
+	--color: #fafafa;
 }
 
 html,
@@ -135,9 +135,11 @@ footer li {
 	right: 0;
 	height: 5em;
 	padding: 0 1.5em;
+	padding-right: 0.25em;
 	background-color: var(--bg-color);
 	box-shadow: 0 0 1em 1em var(--bg-color);
 	font-family: Helvetica, sans-serif;
+	padding-bottom: 0.75em;
 }
 #email > a {
 	border: none;
